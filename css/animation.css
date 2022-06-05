@@ -1,6 +1,6 @@
 /*Animation Menu Hamburguesa - aside - footer redes*/
 .nav__label:hover, .nav__link:hover, .footer__logo:hover, .aside__publicity-img:hover{
-    transition: 0.5s;
+    transition: 1s;
     transform: scale(1.2);
 }
 /*Animation Menu Hamburguesa - aside - footer redes end */
