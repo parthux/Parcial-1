@@ -4,9 +4,8 @@ body{
     background-color: #343a40;
 }
 /* header start */
-.header, .nav-container, .main,.form, .aside, .footer{
+.header, .nav-container, .flex-container, .main,.form, .aside, .footer{
     display: flex;
-    width: 100vw;
     overflow: hidden;
 }
 .header{
@@ -58,6 +57,11 @@ body{
     border-radius: 10px;
 }
 /* Nav end */
+/* Flex-Container Start */
+.flex-container{
+    flex-direction: column;
+}
+/* Flex-Container end */
 /* Main Start */
 .main{
     margin-top: 1rem;
@@ -73,8 +77,8 @@ body{
     padding: 1rem;
     flex-direction: inherit;
     background-color: white;
-    box-shadow: 6px 6px 6px 6px hsla(0, 0%, 0%, 0.542);
-    border-radius: 5px;
+    box-shadow: 6px 20px 5px rgb(0 0 0 / 20%);
+    border-radius: 10px;
 }
 .form__fielset, .form__label{
     display: block;
@@ -171,7 +175,7 @@ body{
 .footer__logo{
     width: 2rem;
 }
-/* Footer start */
+/* Footer end */
 /* Validation javascript start */
 .nav__link--action{
     display: flex;
@@ -198,3 +202,81 @@ body{
 }
 /* Validation javascript end */
 
+@media screen and (min-width: 1024px){
+    /* nav start desktop */
+    .nav-container{
+        align-items: normal;
+    }
+    .nav__hamburguesa{
+        display: none;
+    }
+    .nav__links{
+        display: flex;
+        flex-direction: row;
+        border-bottom: 1px solid white;
+        border-top: 1px solid white ;
+    }
+    .nav__link{
+        border: none;
+        width: auto;
+    }
+    /* nav end desktop */
+    /* flex-container start desktop */
+    .flex-container{
+        flex-direction: row;
+    }
+    /* flex-container end desktop */
+    /* main start desktop */
+    .main{
+        flex: 70%;
+        flex-direction: row;
+        align-items: normal;
+        justify-content: normal;
+    }
+    .main , .aside{
+        margin: 0.5rem 0rem;
+        padding: 1rem;
+    }
+    .form, .aside{
+        margin-bottom: 0;
+    }
+    .form{
+        flex-wrap: wrap;
+        height: 70vh;
+    }
+    .form__fielset{
+        flex: 40%;
+        padding: 0.5rem;
+    }
+    .form__fielset--action, .form__enviar--action{
+        flex: 100%;
+    }
+    /* main end desktop */
+    /* Aside start desktop */
+    .aside{
+        flex:20%;
+        justify-content: normal;
+        flex-direction: column;
+    }
+    .aside__btn-publicity{
+        margin: 0.5rem 0;
+    }
+    .aside__btn-publicity-action{
+        margin-top: 0;
+    }
+    .aside__publicity-img{
+        width: 100%;
+        max-height:25rem ;
+        height: 100%;
+    }
+    /* Aside End desktop */
+    /* Footer start desktop */
+    .footer{
+        flex-flow: row;
+        justify-content: space-between;
+    }
+    .footer__title{
+        margin-left: 1rem;
+    }
+    /* Footer end desktop */
+}

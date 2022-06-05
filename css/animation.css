@@ -1,9 +1,9 @@
-/*Animation Menu Hamburguesa - footer redes*/
-.nav__label:hover, .nav__link:hover, .footer__logo:hover{
+/*Animation Menu Hamburguesa - aside - footer redes*/
+.nav__label:hover, .nav__link:hover, .footer__logo:hover, .aside__publicity-img:hover{
     transition: 0.5s;
     transform: scale(1.2);
 }
-/*Animation Menu Hamburguesa - footer redes end */
+/*Animation Menu Hamburguesa - aside - footer redes end */
 /*Animation Form__Input */
 .form__input:focus{
     outline: none;
