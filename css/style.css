@@ -203,6 +203,14 @@ body{
 /* Validation javascript end */
 
 @media screen and (min-width: 1024px){
+    /* nav header desktop */
+    .header{
+        align-items: center;
+    }
+    .header__title{
+        font-size: 4rem;
+    }
+    /* nav header end desktop */
     /* nav start desktop */
     .nav-container{
         align-items: normal;
@@ -242,11 +250,13 @@ body{
     }
     .form{
         flex-wrap: wrap;
-        height: 70vh;
+        max-height: 90vh;
+        height: 100%;
     }
     .form__fielset{
         flex: 40%;
         padding: 0.5rem;
+        margin: 0;
     }
     .form__fielset--action, .form__enviar--action{
         flex: 100%;
