@@ -1,0 +1,18 @@
+/*Animation Menu Hamburguesa - footer redes*/
+.nav__label:hover, .nav__link:hover, .footer__logo:hover{
+    transition: 0.5s;
+    transform: scale(1.2);
+}
+/*Animation Menu Hamburguesa - footer redes end */
+/*Animation Form__Input */
+.form__input:focus{
+    outline: none;
+    border-bottom: 1px solid black;
+}
+/*Animation Form__Input end */
+/*Animation buttom enviar */
+.form__button:hover{
+    transform: scale(1.1);
+    transition: 1s;
+}
+/*Animation buttom enviar end */

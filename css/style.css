@@ -4,7 +4,7 @@ body{
     background-color: #343a40;
 }
 /* header start */
-.header, .nav-container, .main, .aside, .footer{
+.header, .nav-container, .main,.form, .aside, .footer{
     display: flex;
     width: 100vw;
     overflow: hidden;
@@ -50,17 +50,134 @@ body{
     text-decoration: none;
     Color: white;
     padding: 0.5rem 0;
-    width: 100%;
+    min-width: 10rem;
+    width: 70vw;
     text-align: center;
     border: 1px solid white;
     font-size: 1.3rem;
+    border-radius: 10px;
 }
 /* Nav end */
-
-/* Validation Menu javascript start*/
+/* Main Start */
+.main{
+    margin-top: 1rem;
+    flex-direction: column;
+    align-items: center;
+}
+/* Main form start */
+.form, .aside{
+    margin-bottom: 1rem;
+}
+.form{
+    width: 85vw;
+    padding: 1rem;
+    flex-direction: inherit;
+    background-color: white;
+    box-shadow: 6px 6px 6px 6px hsla(0, 0%, 0%, 0.542);
+    border-radius: 5px;
+}
+.form__fielset, .form__label{
+    display: block;
+}
+.form__fielset, .form__paragraph-valitacion{
+    margin: 0.3rem 0;
+}
+.form__label{
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+}
+.form__label--action, .form__select-pais{
+    display: inline-block;
+}
+.form__select-pais{
+    padding: 0.3rem;
+}
+.form__input{
+	border: none;
+    padding: 0.5rem 0;
+}
+.form__input, .form__textarea{
+    width: 100%;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.341);
+}
+.form__input--action{
+    width: auto;
+    padding: 0;
+}
+.form__input-icon{
+    position: relative;
+}
+.form__validation-estado, .form__paragraph-valitacion{
+    display: none;
+}
+.form__validation-estado{
+    position: absolute;
+    right: 0;
+    top:5px;
+    z-index:10;
+}
+.form__enviar{
+    margin: 1.2rem 0;
+    text-align: center;
+}
+.form__button{
+    max-width: 20rem;
+    width: 90%;
+    padding: 0.5rem 0rem;
+    background-color: rgba(0, 0, 0, 0.863);
+    border-radius: 10px;
+    border: 1px solid transparent;
+    color: white;
+}
+/* Main form end */
+/* Main End */
+/* Footer start */
+.footer{
+    margin-top: 3rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.867);
+    width: 100%;
+    height: 10rem;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+}
+.footer__row{
+    color: #FFF;
+    font-size: 1.2rem;
+}
+.footer__rede{
+    text-decoration: none;
+    margin: 0 1rem;
+}
+.footer__logo{
+    width: 2rem;
+}
+/* Footer start */
+/* Validation javascript start */
 .nav__link--action{
     display: flex;
 }
-/* Validation Menu javascript end */
-
+.form__fielset-correcto .form__validation-estado{
+    fill: green;
+    display: block;
+}
+.form__fielset-correcto .form__input{
+    border-bottom: 1px solid green;
+}
+.form__fielset-incorrecto .form__label{
+    color: red;
+}
+.form__fielset-incorrecto .form__validation-estado{
+    fill: red;
+    display: block;
+}
+.form__fielset-incorrecto .form__input{
+    border-bottom: 1px solid red;
+}
+.form__paragraph-valitacion--action{
+    display: block;
+}
+/* Validation javascript end */
 
