@@ -11,7 +11,7 @@ menuHamburguesa.addEventListener('click', () => {
 const form = document.getElementById('formRegistration');
 const formInpust = document.querySelectorAll('input');
 const selectPais = document.getElementById('pais');
-const checksubmit ={
+const checksubmit = {
     name: false,
     surname: false,
     useremail: false,
@@ -122,6 +122,7 @@ const  validarFormulario = (e) =>{
             }
         break;
     }
+    console.log(temp);
 };
 formInpust.forEach((input) => {
     input.addEventListener('keyup', validarFormulario);
@@ -137,6 +138,14 @@ form.addEventListener('submit', (e) => {
         document.querySelectorAll('.form__fielset-correcto').forEach((x) =>{
             x.classList.remove('form__fielset-correcto');
         });
+        let resetObject = false;
+        checksubmit.name= resetObject;
+        checksubmit.age= resetObject;
+        checksubmit.pais= resetObject;
+        checksubmit.sexo= resetObject;
+        checksubmit.surname= resetObject;
+        checksubmit.tema= resetObject;
+        checksubmit.useremail= resetObject;
     }else{
         document.querySelector('#divButtomEnviar .form__paragraph-buttom').classList.add('form__paragraph-buttom--action');
         let enviarTemp = false;
