@@ -103,7 +103,16 @@ const  validarFormulario = (e) =>{
         break;
         case "temasInteres":
             nameFielset= 'fielsetTemas';
-
+            const valCheck= document.querySelector("#fielsetTemas input[type=checkbox]:checked");
+            console.log(valCheck);
+            if (valCheck != null){
+                select = true;
+                checksubmit.tema=true;
+                datos2(select, nameFielset);
+            }else{
+                select = false;
+                datos2(select, nameFielset);
+            }
         break;
         case "pais":
             nameFielset= 'fielsetPais';
