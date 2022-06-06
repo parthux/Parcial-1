@@ -96,16 +96,16 @@
                     <label for="" class="form__label">Temas de Interés:</label>
                     <ul class="form__lists">
                         <li class="form__list">
-                            <input type="checkbox" value="musica" class="form__input form__input--action">Música
+                            <input type="checkbox" name="temasInteres" value="musica" class="form__input form__input--action">Música
                         </li>
                         <li class="form__list">
-                            <input type="checkbox" value="deporte" class="form__input form__input--action">Deporte
+                            <input type="checkbox" name="temasInteres" value="deporte" class="form__input form__input--action">Deporte
                         </li>
                         <li class="form__list">
-                            <input type="checkbox" value="juegos" class="form__input form__input--action">Juegos
+                            <input type="checkbox" name="temasInteres" value="juegos" class="form__input form__input--action">Juegos
                         </li>
                         <li class="form__list">
-                            <input type="checkbox" value="tecnologia" class="form__input form__input--action">Tecnología
+                            <input type="checkbox" name="temasInteres" value="tecnologia" class="form__input form__input--action">Tecnología
                         </li>
                     </ul>
                     <p class="form__paragraph-valitacion">
@@ -122,14 +122,14 @@
                         <option value="uruguay">Uruguay</option>
                     </select>
                     <p class="form__paragraph-valitacion">
-                        Porfavor Seleccione una las opciones presentadas.
+                        Porfavor seleccione una opcion valida.
                     </p>
                 </fielset>
                 <fielset class="form__fielset  form__fielset--action" id="fielsetComentario">
                     <label for="comentario" class="form__label">Comentario:</label>
                     <textarea name="comentario" id="comentario" rows="5" placeholder="Escribe un comentario" class="form__textarea"></textarea>
                 </fielset>
-                <div class="form__enviar form__enviar--action">
+                <div class="form__enviar form__enviar--action" id="divButtomEnviar">
                     <p class ="form__paragraph-buttom">
                         <box-icon name='error' class="form__icon-error"></box-icon> <span class="form__error">Error:</span> Porfavor completa él o los campos que faltan.
                     </p>

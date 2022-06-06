@@ -121,6 +121,7 @@ body{
     z-index:10;
 }
 .form__enviar{
+    margin-top: 0.5rem;
     text-align: center;
 }
 .form__paragraph-buttom{
@@ -137,6 +138,7 @@ body{
     text-decoration: underline;
 }
 .form__button{
+    cursor: pointer;
     max-width: 20rem;
     width: 90%;
     padding: 0.5rem 0rem;
@@ -201,6 +203,9 @@ body{
 }
 .form__fielset-incorrecto .form__label{
     color: red;
+}
+.form__fielset-correcto .form__label{
+    color: green;
 }
 .form__fielset-incorrecto .form__validation-estado{
     fill: red;
@@ -271,6 +276,9 @@ body{
     }
     .form__fielset--action, .form__enviar--action{
         flex: 100%;
+    }
+    .form__enviar{
+        margin-top: 0;
     }
     /* main end desktop */
     /* Aside start desktop */

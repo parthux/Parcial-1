@@ -1,18 +1,12 @@
-/*Animation Menu Hamburguesa - aside - footer redes*/
-.nav__label:hover, .nav__link:hover, .footer__logo:hover, .aside__publicity-img:hover{
-    transition: 1s;
-    transform: scale(1.2);
+/*Animation Menu Hamburguesa - aside - footer redes - buttom-enviar */
+.nav__label:hover, .footer__logo:hover, .aside__publicity-img:hover, .form__button:hover, .nav__link:hover{
+    transition: 0.5s;
+    transform: scale(0.9);
 }
-/*Animation Menu Hamburguesa - aside - footer redes end */
+/*Animation Menu Hamburguesa - aside - footer redes - buttom-enviar end */
 /*Animation Form__Input */
 .form__input:focus{
     outline: none;
     border-bottom: 1px solid black;
 }
 /*Animation Form__Input end */
-/*Animation buttom enviar */
-.form__button:hover{
-    transform: scale(1.1);
-    transition: 1s;
-}
-/*Animation buttom enviar end */
