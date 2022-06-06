@@ -25,23 +25,17 @@ const datos = (temp, nameFielset) =>{
         document.getElementById(`${nameFielset}`).classList.remove('form__fielset-incorrecto');
         document.querySelector(`#${nameFielset} .form__paragraph-valitacion`).classList.remove('form__paragraph-valitacion--action');
         document.getElementById(`${nameFielset}`).classList.add('form__fielset-correcto');
-        document.querySelector(`#${nameFielset} box-icon`).setAttribute('name','check-circle');
     }else{
         document.getElementById(`${nameFielset}`).classList.remove('form__fielset-correcto');
         document.getElementById(`${nameFielset}`).classList.add('form__fielset-incorrecto');
-        document.querySelector(`#${nameFielset} box-icon`).setAttribute('name','x-circle');
         document.querySelector(`#${nameFielset} .form__paragraph-valitacion`).classList.add('form__paragraph-valitacion--action');
     }
 };
 const datos2 = (temp, nameFielset) =>{
     if(temp == true){
-        document.getElementById(`${nameFielset}`).classList.remove('form__fielset-incorrecto');
-        document.querySelector(`#${nameFielset} .form__paragraph-valitacion`).classList.remove('form__paragraph-valitacion--action');
-        document.getElementById(`${nameFielset}`).classList.add('form__fielset-correcto');
+        document.querySelector(`#${nameFielset} box-icon`).setAttribute('name','check-circle');
     }else{
-        document.getElementById(`${nameFielset}`).classList.remove('form__fielset-correcto');
-        document.getElementById(`${nameFielset}`).classList.add('form__fielset-incorrecto');
-        document.querySelector(`#${nameFielset} .form__paragraph-valitacion`).classList.add('form__paragraph-valitacion--action');
+        document.querySelector(`#${nameFielset} box-icon`).setAttribute('name','x-circle');
     }
 };
 const  validarFormulario = (e) =>{
@@ -53,9 +47,11 @@ const  validarFormulario = (e) =>{
             if (e.target.value.length > 3){
                 temp = true;
                 datos(temp, nameFielset);
+                datos2(temp, nameFielset);
                 checksubmit.name =true;
             }else{
                 datos(temp, nameFielset);
+                datos2(temp, nameFielset);
             }
         break;
         case "surname":
@@ -63,9 +59,11 @@ const  validarFormulario = (e) =>{
             if (e.target.value.length > 3){
                 temp = true;
                 datos(temp, nameFielset);
+                datos2(temp, nameFielset);
                 checksubmit.surname =true;
             }else{
                 datos(temp, nameFielset);
+                datos2(temp, nameFielset);
             }
         break;
         case "useremail":
@@ -74,9 +72,11 @@ const  validarFormulario = (e) =>{
             if (emailValidation.test(e.target.value)){
                 temp = true;
                 datos(temp, nameFielset);
+                datos2(temp, nameFielset);
                 checksubmit.useremail =true;
             }else{
                 datos(temp, nameFielset);
+                datos2(temp, nameFielset);
             }
         break;
         case "age":
@@ -85,19 +85,21 @@ const  validarFormulario = (e) =>{
             if (stringNumero > 0 && stringNumero < 100 && Number.isInteger(stringNumero)){
                 temp = true;
                 datos(temp, nameFielset);
+                datos2(temp, nameFielset);
                 checksubmit.age =true;
             }else{
                 datos(temp, nameFielset);
+                datos2(temp, nameFielset);
             }
         break;
         case "sexo":
             nameFielset= 'fielsetSexo';
             if (e.target.checked){
                 temp = true;
-                datos2(temp, nameFielset);
+                datos(temp, nameFielset);
                 checksubmit.sexo =true;
             }else{
-                datos2(temp, nameFielset);
+                datos(temp, nameFielset);
             }
         break;
         case "temasInteres":
@@ -106,23 +108,22 @@ const  validarFormulario = (e) =>{
             if (valCheck != null){
                 temp = true;
                 checksubmit.tema=true;
-                datos2(temp, nameFielset);
+                datos(temp, nameFielset);
             }else{
-                datos2(temp, nameFielset);
+                datos(temp, nameFielset);
             }
         break;
         case "pais":
             nameFielset= 'fielsetPais';
             if (e.target.value == 'argentina' || e.target.value == 'chile' || e.target.value == 'brasil' || e.target.value == 'uruguay'){
                 temp = true;
-                datos2(temp, nameFielset);
+                datos(temp, nameFielset);
                 checksubmit.pais =true;
             }else{
-                datos2(temp, nameFielset);
+                datos(temp, nameFielset);
             }
         break;
     }
-    console.log(temp);
 };
 formInpust.forEach((input) => {
     input.addEventListener('keyup', validarFormulario);
@@ -138,7 +139,7 @@ form.addEventListener('submit', (e) => {
         document.querySelectorAll('.form__fielset-correcto').forEach((x) =>{
             x.classList.remove('form__fielset-correcto');
         });
-        let resetObject = false;
+        const resetObject = false;
         checksubmit.name= resetObject;
         checksubmit.age= resetObject;
         checksubmit.pais= resetObject;
@@ -153,30 +154,34 @@ form.addEventListener('submit', (e) => {
         if(checksubmit.name == false){
             enviarFielset= 'fielsetName';
             datos(enviarTemp, enviarFielset);
+            datos2(enviarTemp, enviarFielset);
         };
         if(checksubmit.surname == false){
             enviarFielset= 'fielsetSurname';
             datos(enviarTemp, enviarFielset);
+            datos2(enviarTemp, enviarFielset);
         };
         if(checksubmit.useremail == false){
             enviarFielset= 'fielsetEmail';
             datos(enviarTemp, enviarFielset);
+            datos2(enviarTemp, enviarFielset);
         };
         if(checksubmit.age == false){
             enviarFielset= 'fielsetAge';
             datos(enviarTemp, enviarFielset);
+            datos2(enviarTemp, enviarFielset);
         };
         if(checksubmit.sexo == false){
             enviarFielset= 'fielsetSexo';
-            datos2(enviarTemp, enviarFielset);
+            datos(enviarTemp, enviarFielset);
         };
         if(checksubmit.tema == false){
             enviarFielset= 'fielsetTemas';
-            datos2(enviarTemp, enviarFielset);
+            datos(enviarTemp, enviarFielset);
         };
         if(checksubmit.pais == false){
             enviarFielset= 'fielsetPais';
-            datos2(enviarTemp, enviarFielset);
+            datos(enviarTemp, enviarFielset);
         };
     }
 });
