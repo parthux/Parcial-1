@@ -135,43 +135,66 @@ form.addEventListener('submit', (e) => {
         document.querySelector('#divButtomEnviar .form__paragraph-buttom').classList.add('form__paragraph-buttom--action');
         if(checksubmit.name == false){
             nameFielset= 'fielsetName';
-            temp =false;
+            temp= false;
+            datos(temp, nameFielset);
+        }else{
+            temp= true;
+            nameFielset= 'fielsetName';
             datos(temp, nameFielset);
         };
-        if(checksubmit.surname == false);{
+        if(checksubmit.surname == false){
             nameFielset= 'fielsetSurname';
-            temp =false;
+            temp= false;
+            datos(temp, nameFielset);
+        }else{
+            temp= true;
+            nameFielset= 'fielsetSurname';
             datos(temp, nameFielset);
         };
-        if(checksubmit.useremail == false);{
+        if(checksubmit.useremail == false){
             nameFielset= 'fielsetEmail';
-            temp =false;
+            temp= false;
+            datos(temp, nameFielset);
+        }else{
+            temp= true;
+            nameFielset= 'fielsetEmail';
             datos(temp, nameFielset);
         };
-        if(checksubmit.age == false);{
+        if(checksubmit.age == false){
             nameFielset= 'fielsetAge';
-            temp =false;
+            temp= false;
+            datos(temp, nameFielset);
+        }else{
+            temp= true;
+            nameFielset= 'fielsetAge';
             datos(temp, nameFielset);
         };
-        if(checksubmit.sexo == false);{
+        if(checksubmit.sexo == false){
             nameFielset= 'fielsetSexo';
-            select =false;
+            select= false;
+            datos2(select, nameFielset);
+        }else{
+            select= true;
+            nameFielset= 'fielsetSexo';
             datos2(select, nameFielset);
         };
-        if(checksubmit.tema == false);{
+        if(checksubmit.tema == false){
             nameFielset= 'fielsetTemas';
-            temp =false;
-            datos2(temp, nameFielset);
+            select= false;
+            datos2(select, nameFielset);
+        }else{
+            select= true;
+            nameFielset= 'fielsetTemas';
+            datos2(select, nameFielset);
         };
-        if(checksubmit.pais == false);{
+        if(checksubmit.pais == false){
             nameFielset= 'fielsetPais';
-            select =false;
+            select= false;
+            datos2(select, nameFielset);
+        }else{
+            select= true;
+            nameFielset= 'fielsetPais';
             datos2(select, nameFielset);
         };
     }
 });
-
-
-
-
-
