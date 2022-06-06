@@ -33,8 +33,8 @@ const datos = (temp, nameFielset) =>{
         document.querySelector(`#${nameFielset} .form__paragraph-valitacion`).classList.add('form__paragraph-valitacion--action');
     }
 };
-const datos2 = (select, nameFielset) =>{
-    if(select == true){
+const datos2 = (temp, nameFielset) =>{
+    if(temp == true){
         document.getElementById(`${nameFielset}`).classList.remove('form__fielset-incorrecto');
         document.querySelector(`#${nameFielset} .form__paragraph-valitacion`).classList.remove('form__paragraph-valitacion--action');
         document.getElementById(`${nameFielset}`).classList.add('form__fielset-correcto');
@@ -47,7 +47,6 @@ const datos2 = (select, nameFielset) =>{
 const  validarFormulario = (e) =>{
     let nameFielset = '';
     let temp = false;
-    let select = false;
     switch (e.target.name){
         case "name":
             nameFielset= 'fielsetName';
@@ -94,34 +93,32 @@ const  validarFormulario = (e) =>{
         case "sexo":
             nameFielset= 'fielsetSexo';
             if (e.target.checked){
-                select = true;
-                datos2(select, nameFielset);
+                temp = true;
+                datos2(temp, nameFielset);
                 checksubmit.sexo =true;
             }else{
-                datos2(select, nameFielset);
+                datos2(temp, nameFielset);
             }
         break;
         case "temasInteres":
             nameFielset= 'fielsetTemas';
             const valCheck= document.querySelector("#fielsetTemas input[type=checkbox]:checked");
-            console.log(valCheck);
             if (valCheck != null){
-                select = true;
+                temp = true;
                 checksubmit.tema=true;
-                datos2(select, nameFielset);
+                datos2(temp, nameFielset);
             }else{
-                select = false;
-                datos2(select, nameFielset);
+                datos2(temp, nameFielset);
             }
         break;
         case "pais":
             nameFielset= 'fielsetPais';
             if (e.target.value == 'argentina' || e.target.value == 'chile' || e.target.value == 'brasil' || e.target.value == 'uruguay'){
-                select = true;
-                datos2(select, nameFielset);
+                temp = true;
+                datos2(temp, nameFielset);
                 checksubmit.pais =true;
             }else{
-                datos2(select, nameFielset);
+                datos2(temp, nameFielset);
             }
         break;
     }
@@ -142,68 +139,35 @@ form.addEventListener('submit', (e) => {
         });
     }else{
         document.querySelector('#divButtomEnviar .form__paragraph-buttom').classList.add('form__paragraph-buttom--action');
+        let enviarTemp = false;
+        let enviarFielset ='';
         if(checksubmit.name == false){
-            nameFielset= 'fielsetName';
-            temp= false;
-            datos(temp, nameFielset);
-        }else{
-            temp= true;
-            nameFielset= 'fielsetName';
-            datos(temp, nameFielset);
+            enviarFielset= 'fielsetName';
+            datos(enviarTemp, enviarFielset);
         };
         if(checksubmit.surname == false){
-            nameFielset= 'fielsetSurname';
-            temp= false;
-            datos(temp, nameFielset);
-        }else{
-            temp= true;
-            nameFielset= 'fielsetSurname';
-            datos(temp, nameFielset);
+            enviarFielset= 'fielsetSurname';
+            datos(enviarTemp, enviarFielset);
         };
         if(checksubmit.useremail == false){
-            nameFielset= 'fielsetEmail';
-            temp= false;
-            datos(temp, nameFielset);
-        }else{
-            temp= true;
-            nameFielset= 'fielsetEmail';
-            datos(temp, nameFielset);
+            enviarFielset= 'fielsetEmail';
+            datos(enviarTemp, enviarFielset);
         };
         if(checksubmit.age == false){
-            nameFielset= 'fielsetAge';
-            temp= false;
-            datos(temp, nameFielset);
-        }else{
-            temp= true;
-            nameFielset= 'fielsetAge';
-            datos(temp, nameFielset);
+            enviarFielset= 'fielsetAge';
+            datos(enviarTemp, enviarFielset);
         };
         if(checksubmit.sexo == false){
-            nameFielset= 'fielsetSexo';
-            select= false;
-            datos2(select, nameFielset);
-        }else{
-            select= true;
-            nameFielset= 'fielsetSexo';
-            datos2(select, nameFielset);
+            enviarFielset= 'fielsetSexo';
+            datos2(enviarTemp, enviarFielset);
         };
         if(checksubmit.tema == false){
-            nameFielset= 'fielsetTemas';
-            select= false;
-            datos2(select, nameFielset);
-        }else{
-            select= true;
-            nameFielset= 'fielsetTemas';
-            datos2(select, nameFielset);
+            enviarFielset= 'fielsetTemas';
+            datos2(enviarTemp, enviarFielset);
         };
         if(checksubmit.pais == false){
-            nameFielset= 'fielsetPais';
-            select= false;
-            datos2(select, nameFielset);
-        }else{
-            select= true;
-            nameFielset= 'fielsetPais';
-            datos2(select, nameFielset);
+            enviarFielset= 'fielsetPais';
+            datos2(enviarTemp, enviarFielset);
         };
     }
 });
