@@ -80,8 +80,15 @@ body{
     box-shadow: 6px 20px 5px rgb(0 0 0 / 20%);
     border-radius: 10px;
 }
-.form__fielset, .form__label{
+.form__fielset, .form__label, .form__title{
     display: block;
+}
+.form__title{
+    text-align: center;
+    flex: 100%;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
 }
 .form__fielset, .form__paragraph-valitacion{
     margin: 0.3rem 0;
@@ -148,6 +155,55 @@ body{
     color: white;
 }
 /* Main form end */
+/* pop-ups start */
+.pop-ups{
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: #343a4077;
+    justify-content: center;
+    align-items: center;
+}
+.pop-ups, .pop-ups__input{
+    display: none;
+}
+.pop-ups__container{
+    max-width: 30rem;
+    width: 90%;
+    background-color: white;
+    max-height: 15rem;
+    height: 90%;
+    border-radius: 10px;
+    padding: 0.5rem;
+    text-align: center;
+    overflow: hidden;
+}
+.pop-ups__label, .pop-ups__title{
+    display: block;
+}
+.pop-ups__label{
+    width: 1.5rem;
+    cursor: pointer;
+    background-color: rgba(255, 0, 0, 0.6);
+}
+.pop-ups__icon{
+    fill: white;
+}
+.pop-ups__header{
+    display: flex;
+    justify-content: end;
+}
+.pop-ups__title{
+    margin: 0.5rem 0;
+    font-size: 1.5rem;
+}
+.pop-ups__img{
+    max-width: 15rem;
+    width: 90%;
+}
+/* pop-ups end */
 /* Main End */
 /* Aside start */
 .aside{
@@ -215,6 +271,9 @@ body{
 }
 .form__paragraph-valitacion--action, .form__paragraph-buttom--action{
     display: block;
+}
+.pop-ups--action{
+    display: flex;
 }
 /* Validation javascript end */
 

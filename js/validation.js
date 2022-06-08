@@ -147,6 +147,7 @@ form.addEventListener('submit', (e) => {
         checksubmit.surname= resetObject;
         checksubmit.tema= resetObject;
         checksubmit.useremail= resetObject;
+        document.getElementById('pop-ups').classList.add('pop-ups--action');
     }else{
         document.querySelector('#divButtomEnviar .form__paragraph-buttom').classList.add('form__paragraph-buttom--action');
         let enviarTemp = false;
@@ -185,3 +186,16 @@ form.addEventListener('submit', (e) => {
         };
     }
 });
+
+//pop-ups
+
+const popUps = document.getElementById('endpopups');
+popUps.addEventListener('click', () =>{
+    document.getElementById('pop-ups').classList.remove('pop-ups--action');
+})
+
+window.addEventListener('click', () =>{
+    document.getElementById('pop-ups').classList.remove('pop-ups--action');
+})
+
+
