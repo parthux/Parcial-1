@@ -31,9 +31,10 @@ body{
     flex-direction: inherit;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
 }
 .nav__hamburguesa, .nav__link{
-    margin: 0.5rem 0;
+    margin: 0.3rem 0;
 }
 .nav__hamburguesa{
     border-bottom: 1px solid white;
@@ -41,9 +42,22 @@ body{
 .nav__input-menu, .nav__links{
     display: none;
 }
-.nav__icon-menu{
-    width: 2.5rem;
-    cursor: pointer;
+.nav__label{
+    width: 2rem;
+    height: 2.5rem;
+    display: inherit;
+    justify-content: inherit;
+    align-items: inherit;
+    flex-direction: inherit;
+    transition: all 1s;
+    position: relative;
+}
+.nav__img-linea{
+    background-color: white;
+    width: 100%;
+    height: 0.3rem;
+    margin: 0.2rem;
+    transition: all 1s;
 }
 .nav__link{
     text-decoration: none;
@@ -274,6 +288,17 @@ body{
 }
 .pop-ups--action{
     display: flex;
+}
+.nav__img-linea--1{
+    transform: rotate(-45deg);
+    position: absolute;
+}
+.nav__img-linea--2{
+    opacity: 0;
+}
+.nav__img-linea--3{
+    transform: rotate(45deg);
+    position: absolute;
 }
 /* Validation javascript end */
 

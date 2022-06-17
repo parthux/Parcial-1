@@ -1,5 +1,5 @@
 /*Animation Menu Hamburguesa - aside - footer redes - buttom-enviar - pop-ups */
-.nav__label:hover, .footer__logo:hover, .aside__publicity-img:hover, .form__button:hover, .nav__link:hover, .pop-ups__label:hover{
+.footer__logo:hover, .aside__publicity-img:hover, .form__button:hover, .nav__link:hover, .pop-ups__label:hover{
     transition: 0.5s;
     transform: scale(0.9);
 }
